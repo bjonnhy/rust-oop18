@@ -9,7 +9,7 @@ pub fn valid_number(number: &str) -> bool {
     number.chars().all(char::is_numeric)
 }
 
-pub fn valid_address(address: &str) -> bool {
+pub fn valid_address(_address: &str) -> bool {
     true
 }
 pub fn eq_ignore_case(left: &str, right: &str) -> bool {

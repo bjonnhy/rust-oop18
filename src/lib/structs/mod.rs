@@ -26,16 +26,12 @@ pub struct Sport {
 }
 
 pub const MAX_TEAMS: usize = 50;
-pub struct Array<T> {
-    data: [T; MAX_TEAMS]
-}
 
-#[derive(Debug)]
 pub struct Division {
-    last_team: u8,
+    _last_team: u8,
     pub name: String,
-    pub teams: Option<Array<Team>>,
-    pub fixtures: Option<Array<Array<GameResult>>>
+    pub teams: [Option<Team>; MAX_TEAMS],
+    pub fixtures: [[Option<GameResult>; MAX_TEAMS]; MAX_TEAMS]
 
     /*
      * / - - - - - -- - - - - - \
@@ -47,7 +43,7 @@ pub struct Division {
      * |   ... |    ... |   ... |
      * |     1 |      0 | 01/11 | // no game against self
      * + - - - - - -- - - - - - +
-     * |        RUNDE XX        |
+     * |        ROUND XX        |
      * + - - - - - -- - - - - - +
      * |     N |      M |   ... |
      * \ - - - - - -- - - - - - /
