@@ -1,4 +1,4 @@
-use super::{super::util, Division, GameResult, Sports, Team, MAX_TEAMS};
+use super::{super::util, Division, GameResult, Sports, Team};
 use std::fmt::{Debug, Formatter, Result};
 use arr_macro::arr;
 
